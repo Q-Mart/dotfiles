@@ -14,10 +14,12 @@ runtime! debian.vim
 " options, so any other options should be set AFTER setting 'compatible'.
 execute pathogen#infect()
 syntax enable
-set autoindent
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set smarttab
+set autoindent
 set number
 set background=dark
 colorscheme solarized
