@@ -1,0 +1,7 @@
+These are the plugins that I currently have installed:
+-ctrlp.vim
+-nerdtree
+-syntastic
+-vim-airline
+-YouCompleteMe
+-Gundo

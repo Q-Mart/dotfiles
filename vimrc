@@ -20,11 +20,26 @@ set tabstop=4
 set softtabstop=4
 set smarttab
 set autoindent
+
 set number
 set background=dark
 colorscheme solarized
 filetype plugin indent on
 set laststatus=2
+set cursorline
+set wildmenu
+
+"Clear search highlights
+nnoremap <leader><space> :nohlsearch<CR>
+
+"Set folding
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
+
+"toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
