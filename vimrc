@@ -12,6 +12,12 @@ runtime! debian.vim
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
+
+"loads python for nvim
+if has('nvim')
+    runtime! plugin/python_setup.vim
+endif
+
 execute pathogen#infect()
 syntax enable
 set expandtab
@@ -76,3 +82,6 @@ let g:syntastic_check_on_wq = 0
 
 "ctrl p ag integration
 let g:ctrlp_user_command = 'ag %s -l --nocolor -gg ""'
+
+"YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_comf.py"
