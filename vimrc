@@ -35,6 +35,11 @@ set laststatus=2
 set cursorline
 set wildmenu
 
+" Autocomplete brackets
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+
 "Clear search highlights
 nnoremap <leader><space> :nohlsearch<CR>
 
