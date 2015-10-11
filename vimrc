@@ -38,6 +38,9 @@ set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent
 
+" open ag.vim
+nnoremap <leader>a :Ag
+
 "toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 
@@ -71,3 +74,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"ctrl p ag integration
+let g:ctrlp_user_command = 'ag %s -l --nocolor -gg ""'
