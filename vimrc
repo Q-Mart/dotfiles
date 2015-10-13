@@ -86,7 +86,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "ctrl p ag integration
-let g:ctrlp_user_command = 'ag %s -l --nocolor -gg ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolori -hidden -g ""'
 
 "YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_comf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
