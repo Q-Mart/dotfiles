@@ -34,7 +34,7 @@ set autoindent
 
 set number
 set background=dark
-colorscheme jellybeans
+colorscheme PaperColor
 filetype plugin indent on
 set laststatus=2
 set cursorline
@@ -79,6 +79,8 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+"Set theme for airline
+let g:airline_theme = 'papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 

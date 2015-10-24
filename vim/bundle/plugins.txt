@@ -13,3 +13,4 @@ These are the plugins that I currently have installed:
 -YCM-Generator
 -c-syntax.vim
 -papercolor-theme
+-haskell-vim
