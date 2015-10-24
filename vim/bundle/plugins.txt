@@ -11,3 +11,5 @@ These are the plugins that I currently have installed:
 -vim-surround
 -vim-fugitive
 -YCM-Generator
+-c-syntax.vim
+-papercolor-theme
