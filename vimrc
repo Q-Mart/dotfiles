@@ -18,6 +18,11 @@ if has('nvim')
     runtime! plugin/python_setup.vim
 endif
 
+"select powerline font for gvim
+if has('gui_running')
+    set guifont=Fira\ Mono\ for\ Powerline\ 10
+endif
+
 execute pathogen#infect()
 syntax enable
 set expandtab
@@ -29,7 +34,7 @@ set autoindent
 
 set number
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 filetype plugin indent on
 set laststatus=2
 set cursorline
@@ -54,6 +59,9 @@ nnoremap <leader>a :Ag
 
 "toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+"toggle NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -85,8 +93,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"ctrl p ag integration
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"ctrl p ag integration if ag is installed
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
 
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
