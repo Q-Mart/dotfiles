@@ -102,3 +102,11 @@ endif
 
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"Map the F5 key to run the current file with its compiler/interpreter
+"Python
+autocmd FileType python map <F5> :! ipython %<cr>
+"Haskell
+autocmd FileType haskell map <F5> :! ghc %<cr>
+"C
+autocmd FileType c map <F5> :! gcc %<cr> 
