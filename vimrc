@@ -23,7 +23,28 @@ if has('gui_running')
     set guifont=Fira\ Mono\ for\ Powerline\ 10
 endif
 
-execute pathogen#infect()
+"Plugins
+call plug#begin()
+
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'Valloric/YouCompleteMe'
+Plug 'simnalamburt/vim-mundo'
+Plug 'rking/ag.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'rdnetto/YCM-Generator'
+Plug 'NLKNguyen/c-syntax.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go'
+
+call plug#end()
+
 syntax enable
 set expandtab
 set shiftwidth=4
@@ -110,3 +131,5 @@ autocmd FileType python map <F5> :! ipython %<cr>
 autocmd FileType haskell map <F5> :! ghc %<cr>
 "C
 autocmd FileType c map <F5> :! gcc %<cr> 
+"JavaScript
+autocmd FileType javascript map <F5> :! nodejs %<cr> 
