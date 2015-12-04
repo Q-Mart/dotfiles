@@ -42,6 +42,7 @@ Plug 'NLKNguyen/c-syntax.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
