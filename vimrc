@@ -48,9 +48,9 @@ call plug#end()
 
 syntax enable
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set smarttab
 set autoindent
 
@@ -131,6 +131,6 @@ autocmd FileType python map <F5> :! ipython %<cr>
 "Haskell
 autocmd FileType haskell map <F5> :! ghc %<cr>
 "C
-autocmd FileType c map <F5> :! gcc %<cr> 
+autocmd FileType c map <F5> :! gcc %<cr>
 "JavaScript
-autocmd FileType javascript map <F5> :! nodejs %<cr> 
+autocmd FileType javascript map <F5> :! nodejs %<cr>
