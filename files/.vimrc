@@ -39,7 +39,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'rdnetto/YCM-Generator'
 Plug 'NLKNguyen/c-syntax.vim'
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
@@ -48,24 +47,19 @@ call plug#end()
 
 syntax enable
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set smarttab
 set autoindent
 
 set number
 set background=dark
-colorscheme PaperColor
+colorscheme brogrammer
 filetype plugin indent on
 set laststatus=2
 set cursorline
 set wildmenu
-
-" Autocomplete brackets
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
 
 "Clear search highlights
 nnoremap <leader><space> :nohlsearch<CR>
@@ -127,7 +121,7 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 "Map the F5 key to run the current file with its compiler/interpreter
 "Python
-autocmd FileType python map <F5> :! ipython %<cr>
+autocmd FileType python map <F5> :! python %<cr>
 "Haskell
 autocmd FileType haskell map <F5> :! ghc %<cr>
 "C

@@ -1,1 +1,0 @@
-/home/qumarth/dotfiles/nvimrc
