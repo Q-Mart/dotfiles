@@ -15,8 +15,13 @@ fi
 #GO
 export PATH=$PATH:/home/qumarth/.linuxbrew/opt/go/libexec/bin
 export GOPATH=$HOME/prog/go
+export PATH=$PATH:$GOPATH/bin
 
 #LinuxBrew
 export PATH="$HOME/.linuxbrew/bin:P$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+#Aliases
+alias mygosrc='$GOPATH/src/github.com/Q-Mart'
+alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
