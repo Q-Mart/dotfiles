@@ -15,7 +15,8 @@ fi
 #GO
 export PATH=$PATH:/home/qumarth/.linuxbrew/opt/go/libexec/bin
 export GOPATH=$HOME/prog/go
-export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 #LinuxBrew
 export PATH="$HOME/.linuxbrew/bin:P$PATH"
