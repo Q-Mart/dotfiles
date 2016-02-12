@@ -119,13 +119,23 @@ endif
 
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+"YouCompleteMe LaTeX
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = [
+    \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
+    \ 're!\\includegraphics([^]]*])?{[^}]*',
+    \ 're!\\(include|input){[^}]*'
+    \ ]
+
+"Spellcheck
+map <F6> :setlocal spell spelllang=en_gb<cr>
 
 "Map the F5 key to run the current file with its compiler/interpreter
 "Python
 autocmd FileType python map <F5> :! python %<cr>
-"Haskell
-autocmd FileType haskell map <F5> :! ghc %<cr>
-"C
-autocmd FileType c map <F5> :! gcc %<cr>
-"JavaScript
-autocmd FileType javascript map <F5> :! nodejs %<cr>
+
+"Auto spell check for markdown and latex
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
+autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
