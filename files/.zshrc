@@ -13,14 +13,17 @@ fi
 # Customize to your needs...
 
 #GO
-export PATH=$PATH:/home/qumarth/.linuxbrew/opt/go/libexec/bin
+export PATH=$PATH:$HOME.linuxbrew/opt/go/libexec/bin
 export GOPATH=$HOME/prog/go
 export PATH=$PATH:$GOPATH/bin
 
 #LinuxBrew
-export PATH="$HOME/.linuxbrew/bin:P$PATH"
+export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+#Caddy
+export PATH="$HOME/.caddy:$PATH"
 
 #Aliases
 alias mygosrc='$GOPATH/src/github.com/Q-Mart'
