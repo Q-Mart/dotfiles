@@ -37,12 +37,12 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'rdnetto/YCM-Generator'
 Plug 'NLKNguyen/c-syntax.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-sleuth'
 
 call plug#end()
 
