@@ -27,21 +27,22 @@ endif
 call plug#begin()
 
 Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe'
-Plug 'simnalamburt/vim-mundo'
+Plug 'simnalamburt/vim-mundo', {'on': 'MundoShow'}
 Plug 'rking/ag.vim'
-Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'Glench/Vim-Jinja2-Syntax', {'for': 'Jinja2'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'NLKNguyen/c-syntax.vim'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'fatih/vim-go'
+Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+Plug 'fatih/vim-go', {'for': 'golang'}
 Plug 'mattn/emmet-vim'
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', {'for': 'latex'}
 Plug 'tpope/vim-sleuth'
 
 call plug#end()
