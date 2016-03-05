@@ -32,7 +32,7 @@ Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe'
-Plug 'simnalamburt/vim-mundo', {'on': 'MundoShow'}
+Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
 Plug 'Glench/Vim-Jinja2-Syntax', {'for': 'Jinja2'}
 Plug 'tpope/vim-commentary'
@@ -42,8 +42,9 @@ Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'fatih/vim-go', {'for': 'golang'}
 Plug 'mattn/emmet-vim'
-Plug 'lervag/vimtex', {'for': 'latex'}
+Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
+Plug 'evidens/vim-twig', {'for': 'twig'}
 
 call plug#end()
 
@@ -63,6 +64,10 @@ set laststatus=2
 set cursorline
 set wildmenu
 
+"mundo
+set undofile
+set undodir=~/.vim/undo
+
 "Clear search highlights
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -76,7 +81,7 @@ set foldmethod=indent
 nnoremap <leader>a :Ag
 
 "toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>u :MundoToggle<CR>
 
 "toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -140,3 +145,6 @@ autocmd FileType python map <F5> :! python %<cr>
 "Auto spell check for markdown and latex
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
+
+"Sync to dev server on write for URY/MyRadio
+autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
