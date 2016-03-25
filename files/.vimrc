@@ -45,14 +45,15 @@ Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'evidens/vim-twig', {'for': 'twig'}
+Plug 'tpope/vim-liquid'
 
 call plug#end()
 
 syntax enable
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set smarttab
 set autoindent
 
