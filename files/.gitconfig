@@ -5,4 +5,7 @@
 [push]
 	default = matching
 [core]
+	editor = nvim
 	excludesfile = ~/.gitignore_global
+[alias]
+		csm = commit -S -m
