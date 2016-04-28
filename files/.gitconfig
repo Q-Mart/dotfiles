@@ -1,0 +1,8 @@
+[user]
+	name = Q-Mart
+	email = qumarthjash@gmail.com
+	signingkey = BE398467
+[push]
+	default = matching
+[core]
+	excludesfile = ~/.gitignore_global
