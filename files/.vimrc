@@ -34,17 +34,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe'
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
-Plug 'Glench/Vim-Jinja2-Syntax', {'for': 'Jinja2'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
-Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
-Plug 'evidens/vim-twig', {'for': 'twig'}
 Plug 'tpope/vim-liquid'
 Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
@@ -115,6 +111,7 @@ set statusline+=%*
 
 set t_Co=256
 
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -126,7 +123,7 @@ if executable('ag')
 endif
 
 "YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "YouCompleteMe LaTeX
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}

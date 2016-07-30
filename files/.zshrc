@@ -26,6 +26,11 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 #Caddy
 export PATH="$HOME/.caddy:$PATH"
 
+#Arduino
+export ARDUINO_DIR="/usr/share/arduino"
+export ARDMK_DIR="/usr/shar/arduino"
+export AVR_TOOLS_DIR="/usr"
+
 #Aliases
 alias mygosrc='$GOPATH/src/github.com/Q-Mart'
 alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
