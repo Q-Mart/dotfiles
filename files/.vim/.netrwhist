@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src'
 let g:netrw_dirhist_2='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src/q2'
 let g:netrw_dirhist_3='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src/q1'
 let g:netrw_dirhist_4='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/document'
 let g:netrw_dirhist_5='/home/qumarth/prog/simplygrey-jekyll/css'
+let g:netrw_dirhist_6='/home/qumarth/dotfiles/files'
