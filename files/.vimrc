@@ -55,9 +55,6 @@ set smarttab
 set autoindent
 
 set number
-set background=dark
-colorscheme brogrammer
-filetype plugin indent on
 set laststatus=2
 set cursorline
 set wildmenu
@@ -147,3 +144,8 @@ autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
 "Sync to dev server on write for URY/MyRadio
 autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
+
+"Colourscheme
+set background=dark
+colorscheme brogrammer
+filetype plugin indent on
