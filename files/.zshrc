@@ -11,6 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export LC_ALL="en_US.UTF-8"
+
 
 #GO
 export PATH=$PATH:$HOME.linuxbrew/opt/go/libexec/bin
