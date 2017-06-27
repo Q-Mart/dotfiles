@@ -147,5 +147,5 @@ autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
 
 "Colourscheme
 set background=dark
-colorscheme brogrammer
+colorscheme molokai
 filetype plugin indent on

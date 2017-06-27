@@ -1,2 +1,2 @@
-files/.vim/plugged/*
-files/.vim/undo/*
+vim/.vim/plugged/*
+vim/.vim/undo/*
