@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stow -t $HOME vim git zsh
+stow -t $HOME vim git zsh bash
