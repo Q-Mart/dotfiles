@@ -81,6 +81,17 @@ nnoremap <leader>u :MundoToggle<CR>
 "toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
+"split navigation with shift+arrows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+tnoremap <silent> <A-Up> <C-\><C-n><C-w>k
+tnoremap <silent> <A-Down> <C-\><C-n><C-w>j
+tnoremap <silent> <A-Left> <C-\><C-n><C-w>h
+tnoremap <silent> <A-Right> <C-\><C-n><C-w>l
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 "set showcmd		" Show (partial) command in status line.
