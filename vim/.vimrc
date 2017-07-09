@@ -92,6 +92,10 @@ tnoremap <silent> <A-Down> <C-\><C-n><C-w>j
 tnoremap <silent> <A-Left> <C-\><C-n><C-w>h
 tnoremap <silent> <A-Right> <C-\><C-n><C-w>l
 
+"Resize splits
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 "set showcmd		" Show (partial) command in status line.
