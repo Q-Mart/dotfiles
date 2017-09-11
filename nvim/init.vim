@@ -18,6 +18,9 @@ if has('nvim')
     runtime! plugin/python_setup.vim
 endif
 
+set runtimepath^=~/.config/nvim/.vim runtimepath+=~/.config/nvim/.vim/after
+let &packpath = &runtimepath
+
 "select powerline font for gvim
 if has('gui_running')
     set guifont=Fira\ Mono\ for\ Powerline\ 10
@@ -28,10 +31,10 @@ call plug#begin()
 
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
@@ -39,7 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
 Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
 Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
@@ -118,33 +121,19 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set t_Co=256
 
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "ctrl p ag integration if ag is installed
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
 
-"YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"YouCompleteMe LaTeX
-if !exists('g:ycm_semantic_triggers')
-    let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = [
-    \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
-    \ 're!\\includegraphics([^]]*])?{[^}]*',
-    \ 're!\\(include|input){[^}]*'
-    \ ]
+"deoplete
+let g:deoplete#enable_at_startup=1
+let g:deoplete#enable_smart_case=1
 
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
@@ -157,8 +146,8 @@ autocmd FileType python map <F5> :! python %<cr>
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
-"Sync to dev server on write for URY/MyRadio
-autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
+"Autorun NeoMake
+autocmd! BufWritePost * Neomake
 
 "Colourscheme
 set background=dark

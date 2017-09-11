@@ -1,0 +1,63 @@
+XTerm.termName: xterm-256color
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+
+! Copy and Paste
+<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! Colours
+! special
+*.foreground:   #cfcfc2
+*.background:   #232629
+*.cursorColor:  #cfcfc2
+
+! black
+*.color0:       #2a2e32
+*.color8:       #31363b
+
+! red
+*.color1:       #c0392b
+*.color9:       #f44f4f
+
+! green
+*.color2:       #218058
+*.color10:      #27ae60
+
+! yellow
+*.color3:       #fdbc4b
+*.color11:      #fdbc4b
+
+! blue
+*.color4:       #2980b9
+*.color12:      #0099ff
+
+! magenta
+*.color5:       #8e44ad
+*.color13:      #af81ff
+
+! cyan
+*.color6:       #27aeae
+*.color14:      #31dddd
+
+! white
+*.color7:       #acada1
+*.color15:      #cfd0c2
+
+
+!Fonts
+XTerm.vt100.faceName: xos4\ Terminess\ Powerline:size=8:antialias=false
+XTerm.vt100.font: 7x13
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! Copyright: Rasmus Steinke
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844

@@ -13,6 +13,10 @@ fi
 # Customize to your needs...
 export LC_ALL="en_GB.UTF-8"
 
+# Editor
+export VISUAL="nvim"
+export EDITOR="nvim"
+
 #GO
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
