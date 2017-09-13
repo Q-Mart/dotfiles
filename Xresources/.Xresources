@@ -2,7 +2,9 @@ UXTerm.termName: xterm-256color
 UXTerm.vt100.metaSendsEscape: true
 UXTerm.vt100.backarrowKey: false
 UXTerm.ttyModes: erase ^?
-UXterm*utf8: 2
+
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
 
 
 ! Copy and Paste
@@ -54,7 +56,6 @@ UXTerm.*.faceName: xft:xos4\ Terminess \Powerline:size=8:antialias=false
 UXTerm.*.font: 7x13
 URxvt.font: xft:xos4\ Terminess \Powerline:size=8:antialias=false
 URxv.font: 7x13
-URxvt.scrollBar: false
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
