@@ -1,11 +1,12 @@
-XTerm.termName: xterm-256color
-XTerm.vt100.metaSendsEscape: true
-XTerm.vt100.backarrowKey: false
-XTerm.ttyModes: erase ^?
+UXTerm.termName: xterm-256color
+UXTerm.vt100.metaSendsEscape: true
+UXTerm.vt100.backarrowKey: false
+UXTerm.ttyModes: erase ^?
+UXterm*utf8: 2
 
 
 ! Copy and Paste
-<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+UXTerm.vt100.selectToClipboard: true
 Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
 Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
@@ -49,8 +50,11 @@ Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
 
 !Fonts
-XTerm.vt100.faceName: xos4\ Terminess\ Powerline:size=8:antialias=false
-XTerm.vt100.font: 7x13
+UXTerm.*.faceName: xft:xos4\ Terminess \Powerline:size=8:antialias=false
+UXTerm.*.font: 7x13
+URxvt.font: xft:xos4\ Terminess \Powerline:size=8:antialias=false
+URxv.font: 7x13
+URxvt.scrollBar: false
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

@@ -155,33 +155,31 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
         position top
+        tray_output primary
 }
 
 #i3lock keyboard shortcut
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec "$HOME/.config/i3/lock.sh"
+
+#remove borders and titlebars
+new_window 1pixel
 
 # Pulse Audio controls
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Media player controls
-bindsym $mod+F5 exec playerctl play
-bindsym $mod+F6 exec playerctl pause
-bindsym $mod+F7 exec playerctl next
-bindsym $mod+F8 exec playerctl previous
-
-# Set monitor configuration
-exec_always xrandr --output HDMI-1 --off --output DP-3 --mode 1920x1080 --pos 0x0 --rotate left --output DVI-D-1 --off --output DP-1 --off --output DP-2 --primary --mode 1920x1080 --pos 1080x408 --rotate normal
-
-
-# Set wallpaper
-exec_always  feh --bg-scale --no-xinerama $HOME/prog/dotfiles/wallpaper.jpg
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 1 +5% && pkill -RTMIN+1 i3blocks #increase sound volume
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 1 -5% && pkill -RTMIN+1 i3blocks pactl set-sink-mute 1 toggle#decrease sound volume
+bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+1 i3blocks # mute sound
 
 # Urgent Colour
+
 set $urgent-bg-color #E53935
 set $text-color #f3f4f5
 client.urgent $urgent-bg-color $urgent-bg-color $text-color
 
 # Compton
 exec_always compton
+
+# Set monitor configuration
+exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --off --output DP-0 --mode 1920x1080 --pos 0x0 --rotate left
+
+# Set wallpaper
+exec_always  feh --bg-scale --no-xinerama $HOME/prog/dotfiles/wallpaper.jpg
