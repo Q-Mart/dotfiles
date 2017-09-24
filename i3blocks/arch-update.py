@@ -97,10 +97,10 @@ if args.aur:
 
 update_count = len(updates)
 if update_count > 0:
-    info = str(update_count) + ' updates available'
+    info = '' + str(update_count)
     matches = matching_updates(updates, args.watch)
     if matches:
         info += ' [{0}]'.format(', '.join(matches))
     print(message.format(args.updates_available_color, info))
 elif not args.quiet:
-    print(message.format(args.base_color, 'system up to date'))
+    print(message.format(args.base_color, ''))
