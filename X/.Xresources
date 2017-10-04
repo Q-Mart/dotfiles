@@ -52,7 +52,7 @@ Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
 
 !Fonts
-UXTerm.*.faceName: xft:xos4\ Terminess \Powerline:size=8:antialias=false
+UXTerm.*.faceName: xft:xos4\ TerminessTTF \Powerline:size=8:antialias=false
 UXTerm.*.font: 7x13
 URxvt.font: xft:xos4\ Terminess \Powerline:size=8:antialias=false
 URxv.font: 7x13
