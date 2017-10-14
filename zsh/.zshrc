@@ -13,6 +13,9 @@ fi
 # Customize to your needs...
 export LC_ALL="en_GB.UTF-8"
 
+#X11 forwarding
+export DISPLAY=localhost:0.0
+
 #GO
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
