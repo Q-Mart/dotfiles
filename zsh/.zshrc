@@ -11,21 +11,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export LC_ALL="en_GB.UTF-8"
 
 #GO
-export PATH=$PATH:$HOME.linuxbrew/opt/go/libexec/bin
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-#LinuxBrew
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
-#Caddy
-export PATH="$HOME/.caddy:$PATH"
-
 #Aliases
+alias tmux='tmux -2'
+
 alias mygosrc='$GOPATH/src/github.com/Q-Mart'
 alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'

@@ -34,32 +34,27 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Valloric/YouCompleteMe'
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
-Plug 'Glench/Vim-Jinja2-Syntax', {'for': 'Jinja2'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
-Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'mattn/emmet-vim'
 Plug 'lervag/vimtex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
-Plug 'evidens/vim-twig', {'for': 'twig'}
+Plug 'tpope/vim-liquid'
+Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 call plug#end()
 
 syntax enable
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set smarttab
 set autoindent
 
 set number
-set background=dark
-colorscheme brogrammer
-filetype plugin indent on
 set laststatus=2
 set cursorline
 set wildmenu
@@ -86,6 +81,21 @@ nnoremap <leader>u :MundoToggle<CR>
 "toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 
+"split navigation with shift+arrows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+tnoremap <silent> <A-Up> <C-\><C-n><C-w>k
+tnoremap <silent> <A-Down> <C-\><C-n><C-w>j
+tnoremap <silent> <A-Left> <C-\><C-n><C-w>h
+tnoremap <silent> <A-Right> <C-\><C-n><C-w>l
+
+"Resize splits
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 "set showcmd		" Show (partial) command in status line.
@@ -103,7 +113,7 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 "Set theme for airline
-let g:airline_theme = 'papercolor'
+let g:airline_theme = 'term'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -112,6 +122,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 set t_Co=256
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -124,7 +135,7 @@ if executable('ag')
 endif
 
 "YouCompleteMe
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "YouCompleteMe LaTeX
 if !exists('g:ycm_semantic_triggers')
     let g:ycm_semantic_triggers = {}
@@ -148,3 +159,8 @@ autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
 "Sync to dev server on write for URY/MyRadio
 autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
+
+"Colourscheme
+set background=dark
+colorscheme molokai
+filetype plugin indent on
