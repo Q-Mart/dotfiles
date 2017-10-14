@@ -28,21 +28,20 @@ call plug#begin()
 
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
-Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
-Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 
 call plug#end()
 
@@ -87,11 +86,6 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-tnoremap <silent> <A-Up> <C-\><C-n><C-w>k
-tnoremap <silent> <A-Down> <C-\><C-n><C-w>j
-tnoremap <silent> <A-Left> <C-\><C-n><C-w>h
-tnoremap <silent> <A-Right> <C-\><C-n><C-w>l
-
 "Resize splits
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -133,18 +127,6 @@ let g:syntastic_check_on_wq = 0
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
-
-"YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"YouCompleteMe LaTeX
-if !exists('g:ycm_semantic_triggers')
-    let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers.tex = [
-    \ 're!\\[A-Za-z]*(ref|cite)[A-Za-z]*([^]]*])?{([^}]*,?)*',
-    \ 're!\\includegraphics([^]]*])?{[^}]*',
-    \ 're!\\(include|input){[^}]*'
-    \ ]
 
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
