@@ -40,12 +40,11 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
-Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
