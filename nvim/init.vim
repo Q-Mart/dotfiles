@@ -137,13 +137,19 @@ let g:deoplete#enable_smart_case=1
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
 
+"Highlight trailing whitespace and 120 character lines
+augroup ErrorHiglights
+    autocmd!
+    autocmd WinEnter,BufEnter * call clearmatches() | call matchadd('ErrorMsg', '\s\+$', 100) | call matchadd('ErrorMsg', '\%>120v.\+', 100)
+augroup END
+
 "Map the F5 key to run the current file with its compiler/interpreter
 "Python
 autocmd FileType python map <F5> :! python %<cr>
 
-"Auto spell check for markdown and latex
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
-autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
+"Auto spell check and word wrapping for markdown and latex
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb tw=79
+autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=79
 
 "Autorun NeoMake
 autocmd! BufWritePost * Neomake

@@ -17,12 +17,18 @@ export LC_ALL="en_GB.UTF-8"
 export VISUAL="nvim"
 export EDITOR="nvim"
 
-#GO
+# GO
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-#Aliases
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Ruby
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# Aliases
 alias tmux='tmux -2'
 
 alias mygosrc='$GOPATH/src/github.com/Q-Mart'
