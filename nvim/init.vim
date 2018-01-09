@@ -115,7 +115,7 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 "Set theme for airline
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'term'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -156,5 +156,5 @@ autocmd! BufWritePost * Neomake
 
 "Colourscheme
 set background=dark
-colorscheme molokai
+colorscheme vividchalk
 filetype plugin indent on
