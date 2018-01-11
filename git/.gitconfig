@@ -8,4 +8,6 @@
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 [commit]
-  gpgsign = true
+	gpgsign = false
+[gpg]
+	program = gpg

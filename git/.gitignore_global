@@ -41,3 +41,7 @@ Thumbs.db
 *.fdb_latexmk
 *.fls
 *.latexmain
+
+
+# Eclipse #
+.metadata/
