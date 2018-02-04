@@ -31,17 +31,19 @@ fi
 # dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
 # i3lock  -I 10 -d -e -u -n -i /tmp/screen.png
 
-letterEnteredColor=d23c3dff
-letterRemovedColor=d23c3dff
-passwordCorrect=00000000
-passwordIncorrect=d23c3dff
-background=00000000
-foreground=ffffffff
-i3lock --clock --datestr "Type password to unlock..." \
-		   --insidecolor=$background --ringcolor=$foreground --line-uses-inside \
-	  	 --keyhlcolor=$letterEnteredColor --bshlcolor=$letterRemovedColor --separatorcolor=$background \
-	  	 --insidevercolor=$passwordCorrect --insidewrongcolor=$passwordIncorrect \
-	     --ringvercolor=$foreground --ringwrongcolor=$foreground \
-	     --radius=20 --ring-width=4 --veriftext="" --wrongtext="" \
-	     --textcolor="$foreground" --timecolor="$foreground" --datecolor="$foreground" \
-       --force-clock -e -n -i /tmp/screen.png
+i3lock -e -n -i /tmp/screen.png
+
+# letterEnteredColor=d23c3dff
+# letterRemovedColor=d23c3dff
+# passwordCorrect=00000000
+# passwordIncorrect=d23c3dff
+# background=00000000
+# foreground=ffffffff
+# i3lock --clock --datestr "Type password to unlock..." \
+# 		   --insidecolor=$background --ringcolor=$foreground --line-uses-inside \
+# 	  	 --keyhlcolor=$letterEnteredColor --bshlcolor=$letterRemovedColor --separatorcolor=$background \
+# 	  	 --insidevercolor=$passwordCorrect --insidewrongcolor=$passwordIncorrect \
+# 	     --ringvercolor=$foreground --ringwrongcolor=$foreground \
+# 	     --radius=20 --ring-width=4 --veriftext="" --wrongtext="" \
+# 	     --textcolor="$foreground" --timecolor="$foreground" --datecolor="$foreground" \
+#            --force-clock -e -n -i /tmp/screen.png
