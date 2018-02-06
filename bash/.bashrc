@@ -98,6 +98,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias uni='cd ~/w2k/University'
+alias y3='cd ~/w2k/University/3'
+alias arts='cd ~/w2k/University/3/ARTS'
+alias inca='cd ~/w2k/University/3/INCA'
+alias embs='cd ~/w2k/University/3/EMBS'
+alias grat='cd ~/w2k/University/3/GRAT'
+alias pcoc='cd ~/w2k/University/3/PCOC'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

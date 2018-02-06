@@ -38,7 +38,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
-Plug 'xuhdev/vim-latex-live-preview'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
