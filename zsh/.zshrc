@@ -33,3 +33,5 @@ alias tmux='tmux -2'
 
 alias mygosrc='$GOPATH/src/github.com/Q-Mart'
 alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
+
+alias weather='curl wttr.in/york'
