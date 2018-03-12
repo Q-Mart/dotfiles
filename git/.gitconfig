@@ -5,7 +5,7 @@
 [push]
 	default = matching
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore_global
 [commit]
 	gpgsign = false

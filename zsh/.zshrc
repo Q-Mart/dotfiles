@@ -13,13 +13,5 @@ fi
 # Customize to your needs...
 export LC_ALL="en_GB.UTF-8"
 
-#GO
-export GOPATH=$HOME/prog/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
-
 #Aliases
 alias tmux='tmux -2'
-
-alias mygosrc='$GOPATH/src/github.com/Q-Mart'
-alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
