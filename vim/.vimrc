@@ -39,7 +39,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'NLKNguyen/c-syntax.vim', {'for': 'c'}
 Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
 Plug 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
