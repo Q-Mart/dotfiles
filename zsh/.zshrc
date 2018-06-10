@@ -35,3 +35,7 @@ alias mygosrc='$GOPATH/src/github.com/Q-Mart'
 alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
 
 alias weather='curl wttr.in/york'
+
+alias uni='cd ~/prog/shared/3rdYear'
+
+alias h='~/.config/i3/termfromhere.sh'

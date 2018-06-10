@@ -31,7 +31,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+b exec ~/.config/i3/termfromhere.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -187,3 +186,9 @@ exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-5 --
 
 # Set wallpaper
 exec_always  feh --bg-scale --no-xinerama $HOME/prog/dotfiles/wallpaper.jpg
+
+# Start telegram
+exec telegram-desktop
+
+# Turn on num lock on startup
+exec numlockx
