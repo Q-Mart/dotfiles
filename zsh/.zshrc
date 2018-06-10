@@ -38,4 +38,4 @@ alias weather='curl wttr.in/york'
 
 alias uni='cd ~/prog/shared/3rdYear'
 
-alias h='~/.config/i3/termfromhere.sh'
+alias h='~/.config/i3/termfromhere.sh&'
