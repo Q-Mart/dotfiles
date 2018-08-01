@@ -182,7 +182,7 @@ for_window [title="opencv-show"] floating enable
 exec_always compton
 
 # Set monitor configuration
-exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --off --output DP-0 --mode 1920x1080 --pos 0x0 --rotate left
+exec_always xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --off --output DP-0 --mode 1920x1080 --pos 1920x0 --rotate normal
 
 # Set wallpaper
 exec_always  feh --bg-scale --no-xinerama $HOME/prog/dotfiles/wallpaper.jpg
