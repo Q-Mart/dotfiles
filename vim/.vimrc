@@ -28,20 +28,19 @@ call plug#begin()
 
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', {'for': 'golang'}
-Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -70,9 +69,6 @@ set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent
-
-" open ag.vim
-nnoremap <leader>a :Ag
 
 "toggle gundo
 nnoremap <leader>u :MundoToggle<CR>
@@ -111,6 +107,9 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+"Deoplete
+let g:deoplete#enable_at_startup = 1
+
 "Set theme for airline
 let g:airline_theme = 'term'
 let g:airline_powerline_fonts = 1
@@ -122,20 +121,6 @@ set statusline+=%*
 
 set t_Co=256
 
-"Deoplete
-let g:deoplete#enable_at_startup = 1
-
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"ctrl p ag integration if ag is installed
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
-
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
 
@@ -146,9 +131,6 @@ autocmd FileType python map <F5> :! python %<cr>
 "Auto spell check for markdown and latex
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
-
-"Sync to dev server on write for URY/MyRadio
-autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
 
 "Colourscheme
 set background=dark

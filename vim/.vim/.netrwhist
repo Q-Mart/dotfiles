@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src'
-let g:netrw_dirhist_2='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src/q2'
-let g:netrw_dirhist_3='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/src/q1'
-let g:netrw_dirhist_4='/home/qumarth/Documents/University/2/POPL/Summative/Summative_2/document'
-let g:netrw_dirhist_5='/home/qumarth/prog/simplygrey-jekyll/css'
-let g:netrw_dirhist_6='/home/qumarth/dotfiles/files'
-let g:netrw_dirhist_7='/home/q/prog/mandlebrot/.git'
-let g:netrw_dirhist_8='/home/q/prog/mandelbrot/.git'
-let g:netrw_dirhist_9='/home/q/prog/dotfiles/vim'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/q/prog/University/2/POPL/Summative/Summative_2/document'
+let g:netrw_dirhist_2='/home/q/prog/Blog-Site/source'
+let g:netrw_dirhist_3='/home/q/prog/Blog-Site/source/_data'
+let g:netrw_dirhist_4='/home/q/prog/Blog-Site/_posts'
+let g:netrw_dirhist_5='/home/q/prog/dotfiles/vim/.vim'
