@@ -35,6 +35,7 @@ Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
@@ -45,6 +46,7 @@ Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 
 call plug#end()
 
