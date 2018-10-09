@@ -3,10 +3,6 @@
 # for examples
 
 # Apart from the branch below, this rc is from WSL
-# Launch Zsh
-if [ -t 1 ]; then
-  exec zsh
-fi
 
 # If not running interactively, don't do anything
 case $- in
