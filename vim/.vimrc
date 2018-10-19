@@ -132,6 +132,9 @@ autocmd FileType python map <F5> :! python %<cr>
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
+"Auto text wrap when using latex
+autocmd FileType tex set tw=90
+
 "Colourscheme
 set background=dark
 colorscheme molokai
