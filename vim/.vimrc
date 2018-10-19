@@ -133,7 +133,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
 "Auto text wrap when using latex
-autocmd FileType tex set tw=90
+autocmd FileType tex set tw=110
 
 "Colourscheme
 set background=dark
