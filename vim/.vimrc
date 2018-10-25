@@ -157,8 +157,8 @@ autocmd FileType python map <F5> :! python %<cr>
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
-"Sync to dev server on write for URY/MyRadio
-autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
+"Auto text wrap with latex
+autocmd FileType text set tw=110
 
 "Colourscheme
 set background=dark
