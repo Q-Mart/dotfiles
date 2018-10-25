@@ -158,7 +158,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
 "Auto text wrap with latex
-autocmd FileType text set tw=110
+autocmd FileType tex set tw=110
 
 "Colourscheme
 set background=dark
