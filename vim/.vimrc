@@ -27,18 +27,14 @@ endif
 call plug#begin()
 
 Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-liquid'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
@@ -121,11 +117,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"ctrl p ag integration if ag is installed
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
-
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
 
@@ -137,8 +128,8 @@ autocmd FileType python map <F5> :! python %<cr>
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb
 
-"Sync to dev server on write for URY/MyRadio
-autocmd BufRead,BufNewFile /home/qumarth/prog/URY/MyRadio/ make myradio
+"Auto text wrap when using latex
+autocmd FileType tex set tw=110
 
 "Colourscheme
 set background=dark
