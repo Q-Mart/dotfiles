@@ -31,11 +31,11 @@ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # Aliases
 alias tmux='tmux -2'
 
-alias mygosrc='$GOPATH/src/github.com/Q-Mart'
-alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
-
 alias weather='curl wttr.in/york'
 
-alias uni='cd ~/prog/shared/3rdYear'
+alias uni='cd ~/prog/shared/4thYear'
+alias prif='cd ~/prog/shared/Project'
+
+alias update='yay -Syu --devel --timeupdate'
 
 alias h='~/.config/i3/termfromhere.sh&'
