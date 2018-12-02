@@ -17,6 +17,8 @@ export LC_ALL="en_GB.UTF-8"
 export VISUAL="nvim"
 export EDITOR="nvim"
 
+export GPG_TTY=$(tty)
+
 # GO
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
