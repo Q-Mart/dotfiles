@@ -1,11 +1,13 @@
 [user]
 	name = Q-Mart
 	email = qumarthjash@gmail.com
-	signingkey = F311E13F1B5039D0
+	signingkey = B37152B12DA49A34
 [push]
 	default = matching
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 [commit]
-  ; gpgsign = true
+	gpgsign = true
+[include]
+	path = ~/.gitconfig.local

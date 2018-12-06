@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/q/prog/University/2/POPL/Summative/Summative_2/document'
 let g:netrw_dirhist_2='/home/q/prog/Blog-Site/source'
 let g:netrw_dirhist_3='/home/q/prog/Blog-Site/source/_data'
 let g:netrw_dirhist_4='/home/q/prog/Blog-Site/_posts'
 let g:netrw_dirhist_5='/home/q/prog/dotfiles/vim/.vim'
+let g:netrw_dirhist_6='/home/q/prog/dotfiles/zsh'

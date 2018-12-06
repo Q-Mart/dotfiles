@@ -16,6 +16,9 @@ export LC_ALL="en_GB.UTF-8"
 #X11 forwarding
 export DISPLAY=localhost:0.0
 
+#GPG
+export GPG_TTY=$(tty)
+
 #GO
 export GOPATH=$HOME/prog/go
 export GOBIN=$GOPATH/bin
@@ -23,6 +26,3 @@ export PATH=$PATH:$GOBIN
 
 #Aliases
 alias tmux='tmux -2'
-
-alias mygosrc='$GOPATH/src/github.com/Q-Mart'
-alias urygosrc='$GOPATH/src/github.com/UniversityRadioYork'
