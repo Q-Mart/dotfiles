@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/q/prog/go/src/github.com/Reconfigureio/examples/histogram-parallel/cmd'
 let g:netrw_dirhist_2='/home/q/prog/go/src/github.com/Reconfigureio/examples/histogram-parallel/cmd/test-histogram'
 let g:netrw_dirhist_3='/home/q/prog/vorderman/voderman/conf/redis.conf'
+let g:netrw_dirhist_4='/home/q/.config/i3/blocks'
+let g:netrw_dirhist_5='/home/q/prog/riley/html'

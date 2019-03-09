@@ -182,13 +182,13 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 ## Note: colors can be nested.
 ##
 #
-#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
 #
-#song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
+song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 #
-#song_library_format = {%n - }{%t}|{%f}
+song_library_format = {%n - }{%t}|{%f}{ (%l)}
 #
-#alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+#alternative_header_first_line_format /p $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 #
 #alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 #
@@ -325,7 +325,7 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -472,11 +472,11 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
 #search_engine_default_search_mode = 1
 #
-#external_editor = nano
+external_editor = nvim
 #
 ## Note: set to yes if external editor is a console application.
 ##
-#use_console_editor = yes
+use_console_editor = yes
 #
 ##### colors definitions #####
 ##
@@ -508,7 +508,7 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 ## are used there is a possibility that you'll be able to use only colors with
 ## transparent background.
 #
-#colors_enabled = yes
+colors_enabled = yes
 #
 #empty_tag_color = cyan
 #
@@ -540,5 +540,11 @@ visualizer_color = 41, 83, 119, 155, 185, 215, 209, 203, 197, 161
 #
 #window_border_color = green
 #
-#active_window_border = red
+active_window_border = red
 #
+header_window_color = "cyan"
+volume_color = "red"
+state_line_color = "yellow"
+state_flags_color = "red"
+progressbar_color = "yellow"
+statusbar_color = "cyan"
