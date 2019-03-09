@@ -36,8 +36,11 @@ alias tmux='tmux -2'
 alias weather='curl wttr.in/york'
 
 alias uni='cd ~/prog/shared/4thYear'
-alias prif='cd ~/prog/shared/Project'
+alias proj='cd ~/prog/shared/Project'
 
 alias update='yay -Syu --devel --timeupdate'
 
 alias h='~/.config/i3/termfromhere.sh&'
+
+# Tmux session with ncmpcpp and cover art
+alias music='tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"'
