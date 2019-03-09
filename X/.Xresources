@@ -3,6 +3,14 @@ UXTerm.vt100.metaSendsEscape: true
 UXTerm.vt100.backarrowKey: false
 UXTerm.ttyModes: erase ^?
 
+
+URxvt*depth: 24
+URxvt*geometry: 100x25
+URxvt.borderColor: #111113
+URxvt.internalBorder: 8
+!URxvt.cursorUnderline: true
+!URxvt.cursorBlink: true
+
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 
@@ -15,36 +23,45 @@ Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 ! Colours
 ! special
 
-*background: #000000
-*foreground: #bebebe
-*cursorColor: #aa2255
+! made w/ http://terminal.sexy/
+! Multicolor
 
-! black + red
-*color0: #000000
-*color1: #f25a5a
-! green + yellow
-*color2: #77bb33
-*color3: #efc334
-! blue + purple
-*color4: #5555dd
-*color5: #C350FF
-! cyan + white
-*color6: #5af2ee
-*color7: #bebebe
-! bright-black + bright-red
-*color8: #222222
-*color9: #ffbbbb
-! bright-green + bright-yellow
-*color10: #dcf692
-*color11: #f6df92
-! bright-blue + bright-purple
-*color12: #b2baf6
-*color13: #f09fff
-! bright-cyan + bright-white
-*color14: #5af2ee
-*color15: #eeeeee
+!black
+*color0:  #171717
+*color8:  #737373
 
+!red
+*color1:  #FF5E5E
+*color9:  #FF7878
 
+!green
+*color2:  #9CE82B
+*color10: #9ACD32
+
+!yellow
+*color3:  #F0E68C
+*color11: #EEE8AA
+
+!blue
+*color4:  #008AFF
+*color12: #4F98FF
+
+!magenta
+*color5:  #E88CFF
+*color13: #EDA6FF
+
+!cyan
+*color6:  #87CEFA
+*color14: #B0E2FF
+
+!white
+*color7:  #DCDCCC
+*color15: #FFFFFF
+
+*background: #101010
+*foreground: #d4d4d4
+
+*cursorColor: darkorange2
 
 
 !Fonts
