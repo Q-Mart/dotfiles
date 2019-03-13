@@ -19,6 +19,8 @@ function add_cover {
     fi
 }
 
+while true
+do
 clear
 ImageLayer -< <(
     add_cover
@@ -26,3 +28,5 @@ ImageLayer -< <(
         add_cover
     done
 )
+sleep 5
+done
