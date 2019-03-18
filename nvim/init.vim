@@ -150,8 +150,8 @@ augroup END
 autocmd FileType python map <F5> :! python %<cr>
 
 "Auto spell check and word wrapping for markdown and latex
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb tw=79
-autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=79
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb tw=110
+autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=110
 
 "Autorun NeoMake
 autocmd! BufWritePost * Neomake
