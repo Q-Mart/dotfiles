@@ -1,3 +1,4 @@
+rename-session music
 neww
 set -g status off
 send-keys '~/.ncmpcpp/cover.sh' C-m

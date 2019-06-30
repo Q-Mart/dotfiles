@@ -80,7 +80,7 @@ zstyle ':prezto:module:history-substring-search' globbing-flags ''
 #
 
 # Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman' frontend 'yay'
 
 #
 # Prompt
