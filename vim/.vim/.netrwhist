@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/media/storage/Programs'
 let g:netrw_dirhist_2='/media/storage/Programs/3rdYear'
 let g:netrw_dirhist_3='/media/storage/Programs/3rdYear/EMBS'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/media/storage/Programs/3rdYear/EMBS/summative/1'
 let g:netrw_dirhist_6='/media/storage/Programs/3rdYear/EMBS/summative/1/report'
 let g:netrw_dirhist_7='/home/q/.config'
 let g:netrw_dirhist_8='/media/F073-AD1F1'
+let g:netrw_dirhist_9='/home/q/prog/playWatch/mark_jay_tutorials'
