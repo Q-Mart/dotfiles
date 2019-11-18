@@ -18,3 +18,5 @@ alias tmux='tmux -2'
 
 #Set editor to nvim
 export EDITOR='vim'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
