@@ -32,12 +32,9 @@ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # Aliases
 alias tmux='tmux -2'
+alias vim='nvim'
 
-alias weather='curl wttr.in/york'
+alias weather='curl wttr.in/cambridge'
 
-alias uni='cd ~/prog/shared/4thYear'
-alias proj='cd ~/prog/shared/Project'
-
-alias update='yay -Syu --devel --timeupdate'
-
-alias h='~/.config/i3/termfromhere.sh&'
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/key-bindings.zsh
