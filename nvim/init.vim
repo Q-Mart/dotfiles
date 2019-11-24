@@ -29,26 +29,33 @@ endif
 "Plugins
 call plug#begin()
 
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'neomake/neomake'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'donRaphaco/neotex', {'for': 'tex'}
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
+Plug 'maralla/completor.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
+
+" The following are commented out as they cause vim to behave a lot
+" differently from regular Vi. They are highly recommended though.
+"set showcmd		" Show (partial) command in status line.
+"set showmatch		" Show matching brackets.
+"set ignorecase		" Do case insensitive matching
+"set smartcase		" Do smart case matching
+"set incsearch		" Incremental search
+"set autowrite		" Automatically save before commands like :next and :make
+"set hidden		" Hide buffers when they are abandoned
+"set mouse=a		" Enable mouse usage (all modes)
 
 syntax enable
 set expandtab
@@ -76,14 +83,8 @@ set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent
 
-" open ag.vim
-nnoremap <leader>a :Ag
-
 "toggle gundo
 nnoremap <leader>u :MundoToggle<CR>
-
-"toggle NERDTree
-nnoremap <leader>n :NERDTreeToggle<CR>
 
 "split navigation with shift+arrows
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -100,18 +101,9 @@ tnoremap <silent> <A-Right> <C-\><C-n><C-w>l
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-"set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
-"set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
 
 " Source a global configuration file if available
+"
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
@@ -125,16 +117,6 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 set t_Co=256
-
-
-"ctrl p ag integration if ag is installed
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
-
-"deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#enable_smart_case=1
 
 "Spellcheck
 map <F6> :setlocal spell spelllang=en_gb<cr>
@@ -153,10 +135,52 @@ autocmd FileType python map <F5> :! python %<cr>
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb tw=110
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=110
 
-"Autorun NeoMake
-autocmd! BufWritePost * Neomake
-
 "Colourscheme
 set background=dark
 colorscheme vividchalk
 filetype plugin indent on
+
+"fzf vim mapping
+nmap <C-P> :Files<CR>
+nmap <C-F> :Rg<CR>
+nmap <C-G> :Tags<CR>
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" In Neovim, you can set up fzf window using a Vim command
+" let g:fzf_layout = { 'window': 'enew' }
+" let g:fzf_layout = { 'window': '-tabnew' }
+" let g:fzf_layout = { 'window': '10new' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+"grep for current word under cursor
+nmap <C-L> :execute "Rg " . expand("<cword>") <CR>

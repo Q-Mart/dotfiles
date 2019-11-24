@@ -38,3 +38,5 @@ alias weather='curl wttr.in/cambridge'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/key-bindings.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
