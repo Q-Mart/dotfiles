@@ -36,6 +36,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
