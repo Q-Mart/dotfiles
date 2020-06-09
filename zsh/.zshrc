@@ -15,8 +15,12 @@ export LC_ALL="en_GB.UTF-8"
 
 #Aliases
 alias tmux='tmux -2'
+alias vim='nvim'
+alias vi='nvim'
+
+alias svn='svn.exe'
 
 #Set editor to nvim
-export EDITOR='vim'
+export EDITOR='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
