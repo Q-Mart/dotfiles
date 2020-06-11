@@ -22,5 +22,6 @@ alias svn='svn.exe'
 
 #Set editor to nvim
 export EDITOR='nvim'
+export VISUAL='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
