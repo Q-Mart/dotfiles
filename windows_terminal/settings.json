@@ -106,9 +106,9 @@
         { "command": "unbound", "keys": [ "alt+right" ] },
         { "command": "unbound", "keys": [ "alt+up" ] },
 
-        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "ctrl+alt+down" },
-        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "ctrl+alt+left" },
-        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "ctrl+alt+right" },
-        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "ctrl+alt+up" }
+        { "command": { "action": "moveFocus", "direction": "down" }, "keys": "ctrl+down" },
+        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "ctrl+left" },
+        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "ctrl+right" },
+        { "command": { "action": "moveFocus", "direction": "up" }, "keys": "ctrl+up" }
     ]
 }
