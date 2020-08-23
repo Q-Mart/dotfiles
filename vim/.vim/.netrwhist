@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/q/prog/dotfiles'
+let g:netrw_dirhist_7='/home/q/prog/dotfiles/i3blocks'
+let g:netrw_dirhist_6='/home/q'
 let g:netrw_dirhist_5='/home/q/prog/adventofcode'
 let g:netrw_dirhist_4='/home/q/prog/adventofcode/2019'
 let g:netrw_dirhist_3='/boot/efi/refind'

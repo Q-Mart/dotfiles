@@ -43,6 +43,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'tidalcycles/vim-tidal'
 
 call plug#end()
 
@@ -184,3 +185,6 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 "grep for current word under cursor
 nmap <C-L> :execute "Rg " . expand("<cword>") <CR>
+
+" Tidal Plugin
+let g:tidal_target = "terminal"

@@ -30,11 +30,13 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Ruby
 export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
+export PATH="$HOME/prog/shared/adb-sync:$PATH"
+
 # Aliases
 alias tmux='tmux -2'
 alias vim='nvim'
-
 alias weather='curl wttr.in/cambridge'
+alias sync_music='~/prog/dotfiles/sync_music.sh'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/key-bindings.zsh
