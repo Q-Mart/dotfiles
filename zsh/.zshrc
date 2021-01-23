@@ -32,6 +32,9 @@ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 export PATH="$HOME/prog/shared/adb-sync:$PATH"
 
+# CUDA
+export PATH="$PATH:/opt/cuda/bin"
+
 # Aliases
 alias tmux='tmux -2'
 alias vim='nvim'
