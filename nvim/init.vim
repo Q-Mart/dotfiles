@@ -37,6 +37,7 @@ Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
 
 call plug#end()
 
@@ -166,5 +167,5 @@ nmap <C-L> :execute "Rg " . expand("<cword>") <CR>
 
 "Colourscheme
 set background=dark
-colorscheme meta5
+colorscheme deus
 filetype plugin indent on

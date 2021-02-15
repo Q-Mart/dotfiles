@@ -40,8 +40,7 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "E:/prog/",
-                "icon": "ms-appdata:///roaming/ubuntu-32.png"
+                "startingDirectory": "E:/prog/"
             },
 
             {
@@ -58,7 +57,15 @@
                 "name": "Ubuntu VM",
                 "commandline": "ssh qumarth@192.168.220.130",
                 "hidden": false,
-                "tabTitle": "Ubuntu VM"
+                "tabTitle": "Ubuntu VM",
+            },
+            {
+                "guid": "{d3310754-2f0c-4026-8330-0e9c6fb62e88}",
+                "name": "EBBS VM",
+                "commandline": "ssh smokey@192.168.220.129",
+                "hidden": false,
+                "tabTitle": "EBBS VM",
+                "colorScheme": "One Half Light"
             },
             {
                 // Make changes here to the cmd.exe profile.
@@ -105,6 +112,9 @@
         { "command": "unbound", "keys": [ "alt+left" ] },
         { "command": "unbound", "keys": [ "alt+right" ] },
         { "command": "unbound", "keys": [ "alt+up" ] },
+
+        // Stop the killall typo from happening
+        { "command": "unbound", "keys": "ctrl+shift+w" },
 
         { "command": { "action": "moveFocus", "direction": "down" }, "keys": "ctrl+down" },
         { "command": { "action": "moveFocus", "direction": "left" }, "keys": "ctrl+left" },
