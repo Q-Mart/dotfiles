@@ -138,7 +138,7 @@ autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=110
 
 "Colourscheme
 set background=dark
-colorscheme vividchalk
+colorscheme deus
 filetype plugin indent on
 
 "fzf vim mapping
