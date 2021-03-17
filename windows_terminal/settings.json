@@ -29,9 +29,10 @@
     {
         "defaults":
         {
-            "fontFace": "Ubuntu Mono derivative PowerLine",
-            "fontSize": 10,
-            "colorScheme": "Tango Dark"
+            "fontFace": "Ubuntu Mono derivative Powerline",
+            "fontSize": 9,
+            "colorScheme": "Tango Dark",
+            "bellStyle": "none"
         },
         "list":
         [
