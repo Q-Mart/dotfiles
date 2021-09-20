@@ -60,7 +60,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = casset filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu updates-pacman-aurhelper
+modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu updates-pacman-aurhelper
 
 tray-position = right
 tray-padding = 2
@@ -415,12 +415,6 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/.config/polybar/updates-pacman-aurhelper.sh
 interval = 600
-
-[module/casset]
-type = custom/script
-exec = /home/q/.config/polybar/run_casset.sh
-tail = true
-click-left = kill -USR1 %pid%
 
 [settings]
 screenchange-reload = true

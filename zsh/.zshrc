@@ -35,11 +35,20 @@ export PATH="$HOME/prog/shared/adb-sync:$PATH"
 # CUDA
 export PATH="$PATH:/opt/cuda/bin"
 
+# TidalCycles
+export TIDAL_BOOT_PATH=~/prog/tidalcycles/tlib/startup.ghci
+
+# OpenFrameworks
+export PG_OF_PATH=/opt/openFrameworks
+
 # Aliases
 alias tmux='tmux -2'
 alias vim='nvim'
 alias weather='curl wttr.in/cambridge'
 alias sync_music='~/prog/dotfiles/sync_music.sh'
+
+alias samples='ls ~/.local/share/SuperCollider/downloaded-quarks/Dirt-Samples/\
+  ~/prog/tidalcycles/samples/tidal-samples/samples-extra'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/key-bindings.zsh

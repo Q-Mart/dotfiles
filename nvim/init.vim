@@ -188,3 +188,5 @@ nmap <C-L> :execute "Rg " . expand("<cword>") <CR>
 
 " Tidal Plugin
 let g:tidal_target = "terminal"
+
+let g:polyglot_initialized = 0

@@ -74,6 +74,7 @@ UXTerm.*.faceName: xft:xos4\ TerminessTTF \Powerline:size=8:antialias=false
 /* URxv.font: 7x13 */
 /* URxvt.letterSpace: -5 */
 URxvt.font: xft:xos4 Terminess Powerline:pixelsize=12
+/* URxvt.font: xft:xos4 Terminess Powerline:pixelsize=16 */
 /* URxvt*font: xft:Droid Sans Mono for Powerline:size=10 */
 URxvt*letterSpace: 0
 
