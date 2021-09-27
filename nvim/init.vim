@@ -44,6 +44,7 @@ Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tidalcycles/vim-tidal'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -190,3 +191,5 @@ nmap <C-L> :execute "Rg " . expand("<cword>") <CR>
 let g:tidal_target = "terminal"
 
 let g:polyglot_initialized = 0
+
+let g:rustfmt_autosave = 1
