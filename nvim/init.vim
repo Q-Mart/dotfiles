@@ -33,11 +33,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'sheerun/vim-polyglot'
-Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
