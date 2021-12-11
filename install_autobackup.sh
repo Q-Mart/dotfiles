@@ -11,6 +11,7 @@ ln -sf $this_dir/autobackup/automatic-backup.service /etc/systemd/system/automat
 ln -sf $this_dir/autobackup/automatic-backup.timer /etc/systemd/system/automatic-backup.timer
 
 ln -sf $this_dir/autobackup/autoeject-no /etc/backups/autoeject-no
+ln -sf $this_dir/autobackup/backup.disks /etc/backups/backup.disks
 ln -sf $this_dir/autobackup/run.sh /etc/backups/run.sh
 
 systemctl daemon-reload

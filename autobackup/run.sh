@@ -1,4 +1,3 @@
-
 #!/bin/bash -ue
 
 # The udev rule is not terribly accurate and may trigger our service before
@@ -61,7 +60,7 @@ BORG_OPTS="--stats --one-file-system --compression lz4 --checkpoint-interval 864
 # No one can answer if Borg asks these questions, it is better to just fail quickly
 # instead of hanging.
 export BORG_RELOCATED_REPO_ACCESS_IS_OK=no
-export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=no
+export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=yes
 
 # Log Borg version
 borg --version
