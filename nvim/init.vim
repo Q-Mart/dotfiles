@@ -40,11 +40,11 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'sheerun/vim-polyglot'
-Plug 'maralla/completor.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tidalcycles/vim-tidal'
 Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -129,10 +129,6 @@ augroup ErrorHiglights
     autocmd WinEnter,BufEnter * call clearmatches() | call matchadd('ErrorMsg', '\s\+$', 100) | call matchadd('ErrorMsg', '\%>120v.\+', 100)
 augroup END
 
-"Map the F5 key to run the current file with its compiler/interpreter
-"Python
-autocmd FileType python map <F5> :! python %<cr>
-
 "Auto spell check and word wrapping for markdown and latex
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_gb tw=110
 autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=en_gb tw=110
@@ -193,3 +189,18 @@ let g:tidal_target = "terminal"
 let g:polyglot_initialized = 0
 
 let g:rustfmt_autosave = 1
+
+" COC nvim
+" JSON C comment highlighting
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" Toggle panel with Tree Views
+nnoremap <silent> <space>t :<C-u>CocCommand metals.tvp<CR>
+" Toggle Tree View 'metalsPackages'
+nnoremap <silent> <space>tp :<C-u>CocCommand metals.tvp metalsPackages<CR>
+" Toggle Tree View 'metalsCompile'
+nnoremap <silent> <space>tc :<C-u>CocCommand metals.tvp metalsCompile<CR>
+" Toggle Tree View 'metalsBuild'
+nnoremap <silent> <space>tb :<C-u>CocCommand metals.tvp metalsBuild<CR>
+" Reveal current current class (trait or object) in Tree View 'metalsPackages'
+nnoremap <silent> <space>tf :<C-u>CocCommand metals.revealInTreeView metalsPackages<CR>
