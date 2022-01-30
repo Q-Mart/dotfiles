@@ -33,7 +33,7 @@ alias tmux='tmux -2'
 alias weather='curl wttr.in/cambridge'
 alias sync_music='~/prog/dotfiles/sync_music.sh'
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/key-bindings.zsh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
+fi
