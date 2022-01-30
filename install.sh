@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-stow -t $HOME zsh
+stow -t $HOME zsh git
 
 stow -t $HOME/.config/nvim nvim
 # stow -t $HOME/.config/mpd mpd
