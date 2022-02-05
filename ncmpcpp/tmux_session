@@ -1,8 +1,0 @@
-rename-session music
-neww
-set -g status off
-send-keys '~/.ncmpcpp/cover.sh' C-m
-split-window -h
-resize-pane -t 0 -x 50
-select-pane -t 1
-send-keys 'ncmpcpp' C-m

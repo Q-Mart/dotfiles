@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Tmux session with ncmpcpp and cover art
-urxvt -e tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"
