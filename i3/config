@@ -153,6 +153,8 @@ bar {
         status_command i3status
 }
 
+default_border pixel 1
+
 gaps inner 10
 
 # Plasma compatibility improvements
@@ -172,6 +174,9 @@ no_focus [class="plasmashell" window_type="notification"]
 
 # Floating telegram
 for_window [class="Telegram"] floating enable
+
+# Titlebar for all floating windows
+for_window [floating] border normal
 
 # Volume controls
 bindsym $mod+F3 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
