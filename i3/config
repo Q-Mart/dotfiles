@@ -157,6 +157,10 @@ default_border pixel 1
 
 gaps inner 10
 
+# Titlebar for all floating windows that do not have borders disabled like
+# below
+for_window [floating] border normal
+
 # Plasma compatibility improvements
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 for_window [class="systemsettings"] floating enable
@@ -175,8 +179,6 @@ no_focus [class="plasmashell" window_type="notification"]
 # Floating telegram
 for_window [class="Telegram"] floating enable
 
-# Titlebar for all floating windows
-for_window [floating] border normal
 
 # Volume controls
 bindsym $mod+F3 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
