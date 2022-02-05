@@ -168,6 +168,7 @@ for_window [floating] border normal
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 for_window [class="systemsettings"] floating enable
 for_window [class="plasmashell"] floating enable
+for_window [title="Plasma"] floating enable, border none
 for_window [class="Plasma"] floating enable, border none
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
@@ -182,7 +183,6 @@ no_focus [class="plasmashell" window_type="notification"]
 
 # Floating telegram
 for_window [class="Telegram"] floating enable
-
 
 # Volume controls
 bindsym $mod+F3 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
