@@ -184,6 +184,8 @@ no_focus [class="plasmashell" window_type="notification"]
 # Floating telegram
 for_window [class="Telegram"] floating enable
 
+for_window [class="Clementine"] floating enable
+
 # Volume controls
 bindsym $mod+F3 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
 bindsym $mod+F2 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
