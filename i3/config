@@ -193,4 +193,4 @@ bindsym $mod+F1 exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix 
 bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
 
 # Background
-exec_always  feh --bg-fill $HOME/prog/shared/dotfiles/wallpaper.jpg
+exec_always  feh --bg-fill --no-xinerama $HOME/prog/shared/dotfiles/wallpaper.jpg
